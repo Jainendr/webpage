@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/0d8992a7e0.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+body {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(to top, rgba(2, 0, 36, 1) 0%, rgba(159, 53, 221, 0.997) 0%, rgb(43, 133, 218) 200%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    max-width: 100%;
+}
+
+.container {
+    display: flex;
+    /* justify-content: start; */
+    height: 100vh;
+    /* margin: 2px 10px; */
+    padding: 0 5px;
+    max-width: 100%;
+}
+
+.side-bar {
+    width: 20%;
+    height: 100%;
+    margin: 5px 4px;
+    padding: 30px 0;
+    box-sizing: border-box;
+}
+
+.logo-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+icon.logo {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(30, 178, 180);
+    background: radial-gradient(circle, rgba(34, 193, 195, 1) 0%, rgb(201, 197, 199));
+    border-radius: 10px;
+    margin-right: 5px;
+}
+
+span.logo-title {
+    font-size: 25px;
+    font-weight: 900;
+    color: aliceblue;
+}
+
+.menu-bar {
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+}
+
+icon.menu-icon {
+    width: 30px;
+    height: 30px;
+    background-color: rgb(51, 119, 207);
+    background: radial-gradient(circle, rgb(47, 195, 34) 0%, rgb(209, 212, 26));
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+span.menu-title {
+    font-size: 18px;
+    color: #fff;
+}
+
+.sidebar-nav {
+    margin-bottom: 30px;
+    font-size: 15px;
+    color: #fff;
+}
+
+.nav1-li {
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+span.dashboard-title {
+    margin-left: 8px;
+}
+
+span.Projects-title {
+    margin-left: 8px;
+}
+
+li.active {
+    background-color: #fff;
+    color: red;
+    border-radius: 5px;
+}
+
+span.Earnings-title {
+    margin-left: 8px;
+}
+
+span.Profile-title {
+    margin-left: 8px;
+}
+
+.support-bar {
+    display: block;
+    color: #fff;
+}
+
+p.support-title {
+    margin-bottom: 20px;
+}
+
+.support-content {
+    cursor: pointer;
+}
+
+.support-content-name {
+    padding: 0 10px;
+    font-size: 15px;
+}
+
+.ticket {
+    background-color: lightgreen;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    position: relative;
+    left: 52px;
+    bottom: 16px;
+    text-align: center;
+}
+
+.main-bar {
+    width: 80%;
+    position: relative;
+    left: 4.5px;
+    background-color: rgb(217, 220, 228);
+    border-radius: 10px 0 0 0;
+    padding: 60px 40px;
+}
+.head{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-bottom: 60px;
+}
+span.profile-name{
+    font-size: 20px;
+    font-weight: 600;
+}
+img.profile-photo{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    padding: 0 5px;
+}
+.middle{
+    border-bottom: 1px solid rgb(189, 189, 189);
+    padding-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.search-icon{
+    width: 15px;
+}
+
+.search-bar{
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color: #fff;
+    width: 190px;
+    height: 25px;
+    padding: 2px;
+    justify-content: center;
+    max-width: 100%;
+    border-radius: 5px;
+}
+input{
+    border: none;
+}
+.nav2 li{
+    display: inline;
+    padding: 20px;
+    
+}
+.active2{
+    font-size: 18px;
+    color: red;
+    font-weight: 700;
+}
+.non-active{
+    color: rgb(145, 145, 145);
+}
+.main-content-bar{
+    margin-top: 20px auto;
+    padding: 20px;
+}
+.main-content-row1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content1{
+    display: block;
+    background-color: #fff;
+    border-radius: 4px;
+    width: 500px;
+    box-sizing: border-box;
+    box-shadow: 0 0 3px 0;
+    margin-right: 10px;
+}
+button{
+    border: 1px solid lightgreen;
+    color: rgb(117, 212, 28);
+    margin-left: 25px;
+    
+}
+.content1-row1{
+   display: flex;
+   align-items: center;
+   margin: 5px 4px;
+}
+.content1-row2{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.price{
+    color: red;
+}
+.content1-row1-imgcont{
+    display: flex;
+    align-items: center;
+}
+.content1-row1-img{
+    width: 20px;
+    border-radius: 100%;
+
+}
+.content2,.content3{
+    display: block;
+    background-color: #fff;
+    border-radius: 4px;
+    width: 500px;
+    box-sizing: border-box;
+    box-shadow: 0 0 3px 0;
+    margin-right: 10px;
+}
+.content2-row1,.content3-row1{
+    display: flex;
+   align-items: center;
+   margin: 5px 4px;
+}
+.content2-row1-imgcont,.content3-row1-imgcont{
+    display: flex;
+    align-items: center;
+}
+.content2-row2,.content3-row2{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="side-bar">
+            <div class="logo-bar">
+                <icon class="logo"></icon>
+                <span class="logo-title">Logo</span>
+            </div>
+            <div class="menu-bar">
+                <icon class="menu-icon"></icon>
+                <span class="menu-title">Hide Menu</span>
+            </div>
+            <div class="sidebar-nav">
+                <nav class="nav1">
+                    <ul class="nav1-ul">
+                        <li class="nav1-li">
+                            <icon class="dashboard-icon"></icon> <span class="dashboard-title">Dashboard</span>
+                        </li>
+                        <li class="nav1-li active">
+                            <icon class="Projects"></icon> <span class="Projects-title">Projects</span>
+                        </li>
+                        <li class="nav1-li">
+                            <icon class="Earnings"></icon> <span class="Earnings-title">Earnings</span>
+                        </li>
+                        <li class="nav1-li">
+                            <icon class="Profile"></icon> <span class="Profile-title">Profile</span>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="support-bar">
+                <p class="support-title">Support</p>
+                <div class="support-content">
+                    <span class="support-content-name">Ticket <div class="ticket">3</div></span>
+                </div>
+            </div>
+        </div>
+        <div class="main-bar">
+            <div class="head">
+                <span class="profile-name">Mayilsamy</span>
+                <img src="data:image/jpeg;base64,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"
+                    class="profile-photo">
+            </div>
+            <div class="middle">
+                <nav class="nav2">
+                    <ul class="nav2-ul">
+                        <li class="nav2-li active2">
+                            My Projects(13)
+                        </li>
+                        <li class="nav2-li non-active">Explore</li>
+                    </ul>
+                </nav>
+                <div class="search-bar">
+                    <img src="https://uxwing.com/wp-content/themes/uxwing/download/user-interface/search-icon.png"
+                        class="search-icon">
+                    <input type="text" class="search-area" placeholder="Search Projects">
+                </div>
+            </div>
+            <div class="main-content-bar">
+                <div class="main-content-row1">
+                    <div class="content1">
+                        <div class="content1-row1">
+                            <div class="content1-row1-imgcont">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_UyUmzqCY69n8Fn3-5BwFQzBZdaQ3K-d743Au7uOtTg&s"
+                                    class="content1-row1-img">
+                                <span class="content1-row1-text">Oyo</span>
+                            </div>
+
+                            <div class="button"><button>Submit Work</button></div>
+                        </div>
+                        <div class="content1-row2">
+                            <div class="para">
+                                <h4>Diwali Campaign</h4>
+                                <p>This is a campaign to create a stunning videos from the boutique...</p>
+                            </div>
+                            <div class="price"> <span class="rup-symbol">&#x20B9;</span>2500</div>
+                        </div>
+                    </div>
+                    <div class="content2">
+                        <div class="content2-row1">
+                            <div class="content2-row1-imgcont">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_UyUmzqCY69n8Fn3-5BwFQzBZdaQ3K-d743Au7uOtTg&s"
+                                    class="content1-row1-img">
+                                <span class="content1-row1-text">Oyo</span>
+                            </div>
+
+                            <div class="button"><button>Submit Work</button></div>
+                        </div>
+                        <div class="content2-row2">
+                            <div class="para">
+                                <h4>Diwali Campaign</h4>
+                                <p>This is a campaign to create a stunning videos from the boutique...</p>
+                            </div>
+                            <div class="price"> <span class="rup-symbol">&#x20B9;</span>2500</div>
+                        </div>
+                    </div>
+                    <div class="content3">
+                        <div class="content3-row1">
+                            <div class="content3-row1-imgcont">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_UyUmzqCY69n8Fn3-5BwFQzBZdaQ3K-d743Au7uOtTg&s"
+                                    class="content1-row1-img">
+                                <span class="content1-row1-text">Oyo</span>
+                            </div>
+
+                            <div class="button"><button>Submit Work</button></div>
+                        </div>
+                        <div class="content3-row2">
+                            <div class="para">
+                                <h4>Diwali Campaign</h4>
+                                <p>This is a campaign to create a stunning videos from the boutique...</p>
+                            </div>
+                            <div class="price"> <span class="rup-symbol">&#x20B9;</span>2500</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-content-row2">
+                    <div class="content1"></div>
+                    <div class="content2"></div>
+                    <div class="content3"></div>
+                </div>
+                <div class="main-content-row3">
+                    <div class="content1"></div>
+                    <div class="content2"></div>
+                    <div class="content3"></div>
+                </div>
+                <div class="main-content-row4">
+                    <div class="content1"></div>
+                    <div class="content2"></div>
+                    <div class="content3"></div>
+                </div>
+                <div class="main-content-row5">
+                    <div class="content1"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
